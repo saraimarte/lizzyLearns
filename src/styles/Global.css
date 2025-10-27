@@ -6,8 +6,8 @@
     --primaryFont: 'IBM Plex Mono, monospace';
     --secondaryFont: None;
     --primaryColor: black;
-    --pColor:  rgb(145, 202, 204);
-    --pColorHover:#94bdbf; 
+    --pColor:  rgb(247, 226, 254);
+    --pColorHover:#b994bf; 
     --secondaryColor: None;
     --text-body-size: 1em;
     /* type scale */
@@ -72,7 +72,7 @@ body {
 
 ::selection {
     /* Change highlight background color to black */
-    background:rgb(145, 202, 204);
+    background: rgb(247, 226, 254);
     /* Change highlight text color to red */
     color: black;
 }
