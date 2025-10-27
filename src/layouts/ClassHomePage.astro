@@ -1,0 +1,70 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+
+const {pageTitle, allArticles, className, fullClassTitle, folderPath1, folderPath2, folderPath3, pathHome} = Astro.props;
+---
+
+<MainLayout pageTitle = {pageTitle} folderPath1= {folderPath1} folderPath2 = {folderPath2} folderPath3 = {folderPath3} pathHome = {pathHome}>
+  <div class="container">
+    <h1 data-pagefind-meta="title" class = "title">{fullClassTitle}</h1>
+
+    <ol data-pagefind-ignore >
+      {allArticles.map(article => (
+        <li>
+          <a href={`/${className}/${article.slug}`}>{article.data.title}</a>
+        </li>
+      ))}
+    </ol>
+    
+  </div>
+</MainLayout>
+
+<style>
+
+    a{
+        color:black;
+        font-family: var(--primaryFont);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        font-size:20px;
+    }
+    ol{
+        margin:20px 40px;
+        line-height: 2em;
+        display:flex;
+        flex-direction: column;
+        gap:0.4em;
+    }
+
+  
+    .title{
+      font-size: 1.3rem;
+      margin: 10px 10px;
+    }
+   
+  
+  .title, ol, a{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+@media (max-width: 768px) {
+  .title, ol, a{
+      font-size: 1rem;
+    }
+  .title{
+    margin: 10px 0;
+
+  }
+  ol{
+    margin:20px 30px;
+
+  }
+
+}
+
+</style>
+
+

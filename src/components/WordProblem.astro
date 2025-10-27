@@ -1,0 +1,31 @@
+---
+const { n, img } = Astro.props;
+---
+
+
+<div class="card">
+  <div class="content">
+    <p>{n}.</p>
+    {img && <img src={img.src} alt= {'Problem ' + n} />}
+    <slot></slot>
+  </div>
+</div>
+
+
+<style>
+
+.card{
+  display: flex;
+  gap:2em;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+</style>

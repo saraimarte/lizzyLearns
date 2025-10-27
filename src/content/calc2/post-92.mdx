@@ -1,0 +1,258 @@
+---
+layout: '@layouts/Blog.astro'
+title: 10.1 Sequences
+pubDate: 2024-10-16T00:00:00Z
+updatedDate: 2024-10-16T00:00:00Z
+draft: false
+author: Sarai Marte
+slug: sequences
+---
+
+import Latex from '@components/Latex.astro';
+import RuleBox from '@components/Rule.astro';
+import Problem from '@components/Problem.astro';
+import Solution from '@components/Solution.astro';
+import ImageMd from '@components/ImageMd.astro';
+
+A **sequence** is a list of numbers. 
+
+It can be finite or infinite.
+
+A very cool fact: sometimes, as the list keep going, the numbers (terms) start to settle closer and closer to a specific value.
+
+Isn't that interesting?
+
+When that happens we say that the sequence **converges** to that certain number. 
+
+Let's take a look at an example. 
+
+The following is a sequence ,
+
+<Latex formula = "a_n = \left\{1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, ...\right\}" />
+
+Here, a<sub>n</sub> is just a fancy way of saying "sequence."
+
+Another way to think of a sequence is as a function a(**n**), read as "a of n". 
+
+This is a function where you input a number **n**  and get a value back for your sequence called a<sub>n</sub> read as "a sub n". 
+
+For example, for the first value of the sequence, we call that '1' a<sub>1</sub>. 
+
+Again, read as "a sub 1" or more intuitivley "a at n = 1." where a is your function. 
+
+It's what you get for your sequence when you plug in 1. 
+
+Let's look at that result again:
+
+Here, you can see that each value is simply a of n. 
+
+<Latex formula = "a_n = \left\{ 
+\begin{array}{c} 
+1 \\ a_1 
+\end{array}, 
+\begin{array}{c} 
+\frac{1}{2} \\ a_2 
+\end{array}, 
+\begin{array}{c} 
+\frac{1}{3} \\ a_3 
+\end{array}, 
+\begin{array}{c} 
+\frac{1}{4} \\ a_4 
+\end{array}, 
+\dots \right\}" />
+
+Now, if you look closely you can see that the numbers in the sequence follow a pattern. The 1's keep being divided by bigger and bigger numbers. 
+
+<Latex formula = "a_n = \left\{1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \frac{1}{6}, \frac{1}{7}, \frac{1}{8}, \frac{1}{9}, \frac{1}{10}, \frac{1}{11}, \frac{1}{12}, \dots \right\}" />
+
+If you think about it, if you keep dividing one whole infinitely, that whole is going to get infinity smaller. So so small that it will end up just disappearing! (Think of cutting one whole pizza infinitly(forever)- the pieces will get infinitly smaller, you won't be able to see them.) It will be 0!
+
+So, **this sequence converges to 0**!
+
+Now, we say it converges to 0 just by looking at it but we could have just figured it out by using calculus.
+
+The question is: "What certain value are the numbers in this sequence getting closer and closer to as the sequence goes on forever?"
+
+Another way to ask that question: "What certain value are the numbers in this sequence being limited to as the sequence keeps going on infinitly?"
+
+That's calculus speak for "hey, just find the limit as the sequence approaches infinity."
+
+In other words,
+
+<Latex formula = "\lim\limits_{n \to \infty} \, a_n" />
+
+You can take the limit of any sequence as the values inside (the n values) approach infinity and if the limit exists then you say that the sequence converges to that specific value.
+
+If the limit does not exist, that intuitively means that the numbers in the sequence are not being limited to any value hence we say the sequence **diverges**. The numbers will keep going but it will be different numbers each time. 
+
+Now, let's say I wanted to prove this sequence converged to 0 with a limit. Well, I would have to take the limit of the sequence. 
+
+But as of now that just looks like this: 
+
+<Latex formula = "\lim\limits_{n \to \infty} \, \left\{1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, ...\right\}" />
+
+but taking the limit of that doesn't really make sense.
+
+We usually take a limit of a function that has variables and stuff. 
+
+This only has...well, stuff.
+
+However, here's another fact: every sequence has a formula/function *a* or a<sub>n</sub> that generates those values in the sequence. 
+
+In other words, these numbers actually come from plugging in stuff into a function (in this class.)
+
+So, the goal is to find the function that generated the numbers in this sequence!
+
+In other words, we have to go from sequence to function. 
+
+How can we do that?
+
+Now, don't worry we only have to do this in the beginning stages. 
+
+They always give you the actual function. 
+
+The function is a(n) = 1/n. So, now we can take the limit!
+
+<Latex formula = "\lim\limits_{n \to \infty} \, a_n = \frac{1}{n} = \frac{1}{\infty} = 0" />
+
+Woo! We proved this sequence converges to 0!
+
+# Formula to Sequence 
+
+# Sequence to Formula 
+
+# Does Sequence Converge or Diverge?
+
+<RuleBox>
+
+To find if a sequence converges, just take the limit as numbers in the sequence approach infinity. 
+
+<Latex formula = "\lim\limits_{n \to \infty} \, a_n = L" />
+
+If L is finite = Sequence a<sub>n</sub> Converges. 
+
+If L is infinity = Sequence a<sub>n</sub> Diverges. 
+
+</RuleBox>
+
+<Problem n = "1">
+<Latex formula="a_n = \cos\left(\frac{n\pi}{2}\right)" />
+</Problem>
+
+<Solution>
+</Solution>
+
+<Problem n = "2">
+<Latex formula="a_n = n \ln\left(1 - \frac{2}{5n}\right)" />
+</Problem>
+
+<Solution>
+**Answer: Converges to 2/5**
+<iframe src="https://www.youtube.com/embed/htbgN_G22e8?si=WmqQC2a_tzXHdaxX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</Solution>
+
+
+<Problem n = "3">
+<Latex formula="a_n = \frac{\ln(n)}{\ln(\ln(n))}" />
+</Problem>
+
+<Solution>
+**Answer: Diverges**
+<iframe  src="https://www.youtube.com/embed/mS9_B4PcU9w?si=neCtwhWkxlev3fl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</Solution>
+
+<Problem n = "4">
+<Latex formula="a_n = e^{-n} \ln(n)" />
+</Problem>
+
+<Solution>
+
+</Solution>
+
+<Problem n = "5">
+<Latex formula="a_n = \left(\frac{n+5}{n+3}\right)^{4n}" />
+</Problem>
+
+<Solution>
+</Solution>
+
+
+<Problem n = "6">
+<Latex formula="a_n = \left( 1 - \frac{1}{n^2} \right)^n" />
+</Problem>
+
+<Solution>
+**Answer: Converges to 1**
+<iframe src="https://www.youtube.com/embed/BnQgyQMFa3A?si=M6mPMU9FIlc1As02" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</Solution>
+
+# What if you can't find the limit?
+
+Sometimes, we can't find the limit! What other tools can we use to determine if a sequence converges or not?
+
+## Theorem 5
+
+<RuleBox>
+<p><b>Theorem 5</b></p>
+
+<Latex formula="
+\begin{aligned}
+&\text{(a)} \quad \lim\limits_{n \to \infty} \frac{\ln n}{n} = 0, \\
+&\text{(b)} \quad \lim\limits_{n \to \infty} \sqrt[n]{n} = 1, \\
+&\text{(c)} \quad \lim\limits_{n \to \infty} x^{1/n} = 1 \quad \text{if } x > 0, \\
+&\text{(d)} \quad \lim\limits_{n \to \infty} x^n = 0 \quad \text{if } |x| < 1, \\
+&\text{(e)} \quad \lim\limits_{n \to \infty} \left( 1 + \frac{x}{n} \right)^n = e^x, \\
+&\text{(f)} \quad \lim\limits_{n \to \infty} \frac{x^n}{n!} = 0.
+\end{aligned}
+"/>
+</RuleBox>
+
+## Squeeze Theorem 
+
+<RuleBox>
+
+<p><b>Squeeze Theorem</b></p>
+
+Either watch this video or read below. 
+
+<iframe  src="https://www.youtube.com/embed/AI_AGJT9_1c?si=XGbt-BmYNh8tOyGy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+*Above, I used functions instead of sequences but the idea is the same. 
+
+Let b<sub>n</sub> be the sequence we're trying to find the limit of. 
+
+Let b<sub>n</sub> and c<sub>n</sub> be other sequences where
+
+<Latex formula="b_n \leq a_n \leq c_n" />
+
+and if
+
+<Latex formula="\lim\limits_{n \to \infty} b_n = \lim\limits_{n \to \infty} c_n = L" />
+
+is true then we can say that that because a<sub>n</sub> is between both b<sub>n</sub> and c<sub>n</sub> and the limits of b<sub>n</sub> and c<sub>n</sub> are the same then that means a<sub>n</sub> must also head in the same direction (be limited to the same value) since, again, it's between both of them. 
+
+</RuleBox>
+
+Find if the sequences converge or diverge. If they converge what do they converge to?
+
+<Problem n = "1" >
+<Latex formula="a_n = \frac{3n + 4(-1)^n}{n}" />
+</Problem>
+<Solution>
+**Answer:** Converges to 3.
+<iframe src="https://www.youtube.com/embed/sRDykP2HuDI?si=Vj2y0Apehys2V2_F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</Solution>
+
+<Problem n = "2" >
+
+<Latex formula="a_n = \frac{n + \sin(n)}{2n + 1}" />
+
+</Problem>
+
+<Solution>
+**Answer:** Converges to 1/2. 
+<iframe src="https://www.youtube.com/embed/FcSfyjJVziI?si=F5ixs0P-9r_ytZNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</Solution>
+
+

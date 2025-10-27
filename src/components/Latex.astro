@@ -1,0 +1,45 @@
+---
+import katex from 'katex';
+import 'katex/dist/katex.min.css';
+
+const { formula = '', align = 'center' } = Astro.props;
+const html = katex.renderToString(formula, { throwOnError: false });
+---
+
+<div class={`latex-wrap ${align === 'left' ? 'left' : 'center'}`}>
+  <span set:html={html} />
+</div>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+  integrity="sha384-NFTC4wvyQKLwuJ8Ez9AvPNBv8zcC2XaQzXSMvtORKw28BdJbB2QE8Ka+OyrIHcQJ"
+  crossorigin="anonymous"
+/>
+
+<style>
+  div{
+    margin-top:20px;
+  }
+  .latex-wrap {
+    width: 100%;
+    display: flex;
+    word-wrap: break-word;
+  }
+  .latex-wrap.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .latex-wrap.left {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .latex-wrap > span {
+    font-size: 1.1em !important;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+</style>

@@ -1,0 +1,137 @@
+---
+layout: '@layouts/Blog.astro'
+title: 8.3 Trig Integrals
+pubDate: 2024-01-05T00:00:00Z 
+updatedDate: 2024-10-15T00:00:00Z 
+draft: false
+author: Sarai Marte
+slug: trig-integrals
+---
+
+import Latex from '@components/Latex.astro';
+import RuleBox from '@components/Rule.astro';
+import Problem from '@components/Problem.astro';
+import Solution from '@components/Solution.astro';
+import ImageMd from '@components/ImageMd.astro';
+
+# Products of Powers of Sines and  Cosines
+
+<RuleBox>
+
+<Latex formula = "\int \sin^m(x) \cos^n(x) \, dx" />
+
+<p>With these types of problems you have 3 scenerios.</p>
+
+<p><b>Case 1 </b>If<b> m odd</b> → Rewrite using <b>sin<sup>2</sup>(x) = 1 -cos<sup>2</sup>(x)</b> then do u-Sub</p>
+
+<p><b>Case 2 </b>If<b> n odd </b> → Rewrite Using <b>cos<sup>2</sup>(x) = 1 -sin<sup>2</sup>(x)</b> then do u-Sub</p>
+
+<p><b>Case 3 </b>If <b> n & m both even </b> → we rewrite using either of the following</p> 
+
+<Latex formula = "\mathbf{\textcolor{red}{\boldsymbol{\sin}^2(x)}} = \frac{1 \mathbf{\textcolor{red}{\boldsymbol{-}}} \cos(2x)}{2}" />
+<Latex formula = "\cos^2(x) = \frac{1 + \cos(2x)}{2}" />
+
+<b> Tip! </b>
+<p> The formulas above are the same thing the only thing that is different are the signs. I remember sin<sup>2</sup>(x) as having the negative sign because <span style = "color:red; font-weight:bold"> sin is bad </span> so <span style = "color:red; font-weight:bold">sin means negative. </span></p>
+
+<p>These are called **half** angle formulas which makes sence because they both **halve** the 1 +/- cos(2x).</p>
+
+</RuleBox>
+
+## Examples 
+
+### Case 1
+<Latex formula = "\int \sin^3(x) \cos^2(x) \, dx" />
+
+
+### Case 2
+
+<Latex formula="\int \cos^5(x) \, dx" />
+
+
+### Case 3
+
+<Latex formula = "\int \sin^2(x) \cos^4(x) \, dx"/>
+
+
+# Integrating Square Roots
+
+<RuleBox>
+
+We can use the following identity to eliminate a square root:
+
+<Latex formula = "\cos^2(\theta) = \frac{1 + \cos(2\theta)}{2} \, \text{ or } \, 1 + \cos(2\theta) = 2\cos^2(\theta)"/>
+<Latex formula = "\sin^2(\theta) = \frac{1 - \cos(2\theta)}{2} \, \text{ or } \, 1 - \cos(2\theta) = 2\sin^2(\theta)"/>
+
+These are the same as the first brainbox- they're the half angle identities. 
+
+</RuleBox>
+
+<Latex formula = "\int_0^{\frac{\pi}{2}} \sqrt{1 - \cos(2x)} \, dx"/>
+
+
+# Products of Powers of Tangents and Secants. 
+
+<RuleBox>
+
+<Latex formula = "\int \tan^m(x) \sec^n(x) \, dx" />
+
+<p>With these types of problems you have 3 scenerios.</p>
+
+<p><b>Case 1 </b>If<b> m odd</b> → Rewrite using <b>tan<sup>2</sup>(x) = sec<sup>2</sup>(x) -1</b> then do u-Sub</p>
+
+<p><b>Case 2 </b>If<b> n even </b> → Rewrite Using <b>sec<sup>2</sup>(x) = 1 + tan<sup>2</sup>(x)</b> then do u-Sub</p>
+
+<p><b>Case 3 </b>If<b> m even and n = 0 </b> → Rewrite Using <b>tan<sup>2</sup>(x) = sec<sup>2</sup>(x) -1</b> then do u-Sub</p>
+
+Afterwards, you may do integration by parts if needed.
+
+<p><b>Tip!</b> The way I remember these rules are mnm like the choclate m&m's and then tan sec tan=.</p>
+</RuleBox>
+
+## Examples
+
+### Case 1 
+
+<Latex formula = "\int \tan^3(\theta) \sec^5(\theta) \, d\theta" />
+
+
+### Case 2
+<Latex formula = "\int \sec^4(2x) \tan^6(2x) \, dx" />
+
+### Case 3
+<Latex formula = "\int_0^{\frac{\pi}{21}} \tan^3(7\theta) \, d\theta" />
+
+
+## Practice 
+
+<Problem n = "1">
+<Latex formula = "\int_0^{\frac{\pi}{21}} \tan^3(7\theta) \, d\theta"/>
+</Problem>
+<Solution>
+<Latex formula = "\frac{1 - \ln(2)}{7}" />
+</Solution>
+
+# Products of Sines and  Cosines
+
+<RuleBox>
+
+<p>These we can all solve with integration by parts but there are identities you can simply memorize to solve these faster.</p> 
+
+<p>If you have the following integrands you can use rewrite them using their respective identities. </p>
+
+<Latex formula = "\sin(mx) \sin(nx) = \frac{1}{2}[\cos((m-n)x) - \cos((m+n)x)]"/>
+
+<Latex formula = "\sin(mx) \sin(nx) = \frac{1}{2}[\sin((m-n)x) + \sin((m+n)x)]"/>
+
+<Latex formula = "\cos(mx) \cos(nx) = \frac{1}{2}[\cos((m-n)x) + \cos((m+n)x)]"/>
+
+</RuleBox>
+
+# Review of Trig U-Sub
+
+# Review of Simplifying Trig Fractions 
+
+
+
+

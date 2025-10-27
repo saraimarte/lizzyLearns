@@ -1,0 +1,43 @@
+---
+
+---
+<div class = "blogContent">
+    <br/>
+    <slot></slot>
+    <br/>
+</div>
+
+<!--Note: If the content div isnt there then the styles for the blogs dont work -->
+
+<style is:inline>
+
+  .blogContent * {
+      font-family: "IBM Plex Mono", monospace;
+      line-height: 1.5;
+      letter-spacing: .2px;
+  }
+
+  
+  .blogContent h1, h2, h3, h4, h5, h6, p{ 
+    margin: 10px 0; 
+  }
+
+  .blogContent h1{
+    font-size:1.3rem;
+  }
+
+  .blogContent h2{
+    font-size:1.2rem;
+  }
+
+  .blogContent h3{
+    font-size:1.1rem;
+  }
+
+  .blogContent p, a, li, ol, ul{
+      font-size: 1rem;
+  }
+  
+
+</style>
+

@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind dist/pagefind_copy",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/mdx": "^3.1.4",
+    "@astrojs/prism": "^3.1.0",
+    "astro": "^4.14.5",
+    "astro-pagefind": "^1.6.0",
+    "katex": "^0.16.11",
+    "three": "^0.167.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/three": "^0.168.0",
+    "pagefind": "^1.1.1"
+  }
+}

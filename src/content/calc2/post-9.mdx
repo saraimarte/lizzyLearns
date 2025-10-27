@@ -1,0 +1,160 @@
+---
+layout: "@layouts/Blog.astro"
+title: 8.4 Trig Subtitution
+pubDate: 2024-05-19T00:00:00Z
+updatedDate: 2024-10-09T00:00:00Z
+draft: false
+author: Sarai Marte
+slug: trig-substitution
+---
+
+import ImageMd from "@components/ImageMd.astro";
+import Solution from "@components/Solution.astro";
+import Problem from "@components/Problem.astro";
+import FAQ from "@components/FAQ.astro";
+import Latex from '@components/Latex.astro';
+
+import img1 from "@images/152/51.svg";
+import img5 from "@images/152/55.svg";
+
+# FAQ
+
+<FAQ question = "How do I know when to use trig sub?">
+
+We use trig sub on specific types of problems, most of the time the problems have a 'tell', it's what _tells_ you that 1. you can use trig sub and 2. which triangle you're going to use.
+
+The 'tell' or the 'main thing' as I call it sometimes is a **root that contains an x<sup>2</sup> and an a<sup>2</sup>.**
+
+</FAQ>
+
+<FAQ question = "How do I memorize the triangles? (You don't)">
+
+<iframe
+  src="https://www.youtube.com/embed/EF3aSfW27rw?si=w1RYj6S9Fs97pbNY"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+</FAQ>
+
+<FAQ question = "How do I know which triangle to use?">
+
+You pick the triangle that contains the form of your 'tell' or the 'main thing'. See the first FAQ.
+
+</FAQ>
+<FAQ question = "What other things do I need to be aware of to solve these problems?">
+**1.** Make sure your final answer does *not* contain a θ.   
+**2.** Recall that you can rewrite some trig functions in terms of sin and cos (See Practice #2 <a href = "https://youtu.be/DskUROMkPrg?t=442">7:22</a>  )  
+**3.** Know the unit circle.  
+**4.** Know your trig identities (See previous lesson).   
+**5.** Recall that if you have sin, the inverse of sin is csc but it can also be written as 1/sin.    
+**6.** How to complete the square.  
+**7.** Recall that just because you *can* doesn't mean you *should*. Sometimes you *can* use trig sub but you *should* use u-sub because it's easier and it...works.
+</FAQ>
+
+## Examples
+
+<ImageMd img={img1} alt="Example 1" />
+
+<Solution>
+
+<Latex formula="\mathbf{\frac{x}{4\sqrt{4 + x^2}} + C}"/>
+
+<iframe
+ 
+  src="https://www.youtube.com/embed/OKBO3-1RzHc?si=jXIt1TZwNN4rfkaP"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+</Solution>
+
+<ImageMd img={img5} alt="Example 2" />
+
+<Solution>
+
+**9π**
+
+<iframe
+ 
+  src="https://www.youtube.com/embed/SxWTukBN4UA?si=cLHj4kCjGObqBElG"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+<div style="position: relative; padding-bottom: 100%; height: 0;">
+  <iframe
+    src="https://jumpshare.com/embed/YwX9C0xSWfmbYb5fAjWv"
+    frameborder="0"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+  ></iframe>
+</div>
+
+</Solution>
+
+## Practice
+
+<Problem n="1">
+<Latex formula = "\int \frac{1}{x \sqrt{x^2 - 4}} \, dx" />
+</Problem>
+
+<Solution>
+<Latex formula="\frac{1}{2} \text{arcsec} \left( \frac{x}{2} \right) + C"/>
+</Solution>
+
+<Problem n = "2">
+<Latex formula = "\int_{1}^{\sqrt{3}} \frac{1}{x \sqrt{x^2 + 1}} \, dx" />
+</Problem>
+
+<Solution>
+<Latex formula="-\ln{\left| \sqrt{3} \right|} + \ln{\left| \sqrt{2} + 1 \right|}"/>
+
+<iframe
+  src="https://www.youtube.com/embed/DskUROMkPrg?si=KkCSx2B6J5idFqkc"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+</Solution>
+
+<Problem n = "3" >
+<Latex formula = "\int \frac{\sqrt{x^2 - 4}}{x} \, dx" />
+</Problem>
+
+<Solution>
+<Latex formula="\sqrt{x^2 - 4} - 2 \, \text{arcsec}\left(\frac{x}{2}\right) + C"/>
+
+<iframe
+ 
+  src="https://www.youtube.com/embed/iVdXfL4Fnzk?si=HpqMNCtV1ZCMfXdk"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+</Solution>
+
+<Problem n = "4" >
+<Latex formula="\int_{1}^{\sqrt{2}} \frac{dx}{x^2 \sqrt{x^2 - 25}}"/>
+</Problem>
+
+<Solution>
+<iframe src="https://www.youtube.com/embed/rFkb-KiEYRU?si=5Iit-MMnu6jV7S_Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</Solution>

@@ -1,0 +1,86 @@
+---
+layout: '@layouts/Blog.astro'
+title: Relations
+pubDate: 2025-01-21T00:00:00Z 
+updatedDate: 2025-08-31T00:00:00Z 
+draft: false
+author: Sarai Marte
+slug: relations
+---
+
+import RuleBox from '@components/Rule.astro';
+
+# 9.1 & 9.3 | Relations: Constructing and Representing Relations + Identifying if Relations Satisfy Certain Properties
+
+Something cool we can do is study the relationships between elements in a set...
+
+<iframe src="https://www.youtube.com/embed/d5akyUx46o8?si=2a7KbyeA41uOuhKq&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Operations on Relations (Union, Intersection, Difference, Complement, Exclusive OR and Composition) Given Roster vs Matrix
+
+<iframe src="https://www.youtube.com/embed/4IfxIRSB0qY?si=06xf4UKxq1mtYHNC&amp;start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# Composition of Relations 
+
+<iframe src="https://www.youtube.com/embed/-0_yQh18twc?si=vmC9Jnx_2bMIqYJ7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# 9.4 | Closures of Relations
+
+So far, we practiced identifying if a relation was reflexive, symmetric, or transitive. 
+
+The phrases 'reflexive closure' or 'transitive closure' may sound complex or overwhelming but guess what?
+
+It's *literally* taking any relation and just ... **making** it reflexive or transitive. 
+
+How do we do that?
+
+We just add the **minimum** amount of pairs needed to satisfy the property.
+
+[Video Soon...]
+
+# 9.5 | Equivalence Relations
+
+<RuleBox>
+**Definition** An **equivalence relation** is one that is reflexive, symmetric, and transitive.
+</RuleBox>
+
+[Video Soon...]
+
+# 9.5 | Equivalence Classes
+
+<RuleBox>
+**Definition** An **equivalence class** is one that groups elements of *a* set that are equivalent to a specific element a given what would make them equivalent.
+</RuleBox>
+
+[Video Soon...]
+
+# 9.6 | Partial Orderings (Partial Order)
+
+<RuleBox>
+**Definition** A **partial ordering** is a relation that is reflexive, anti-symmetric, and transitive. We denote a partial order relation by the symbol ⪯. This symbol is NOT a less than or equal to sign.
+</RuleBox>
+
+<RuleBox>
+**Definition** Given a set A, if we find that a relation R (or ≤) on A is a partial order relation then we say, (A, R) or (A, ⪯) is a **partially ordered set (or poset).**
+</RuleBox>
+
+# 9.6 | Total Orderings (Total Order)
+
+<RuleBox>
+**Definition** A **total order set** is one that (a) is a partial order relation and (b) (a,b) ∈ R ('All pairs in the relation R') should be comparable
+</RuleBox>
+
+<RuleBox>
+**Definition** A pair (a,b) is **comparable** if a is related to b or b is related to a. In other words if (a,b) ∈ R or (b,a) ∈ R.
+</RuleBox>
+
+## 9.6| Well-Ordering Posets 
+
+<RuleBox>
+**Definition** A  well-ordering poset is one that is (a) total ordering set and (b) every non-empty subset of A has a minimum element.
+</RuleBox>
+
+<RuleBox>
+**Definition** A  well-founded poset is one that has a minimum element (doesn't decrease indefinitely)
+</RuleBox>
+
